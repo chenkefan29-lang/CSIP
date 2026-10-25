@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSIP 城市污水处理 VR 数字孪生</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0b141c; font-family: system-ui, "Microsoft YaHei", sans-serif; }
+    canvas { display: block; }
+    #hud { position: fixed; top: 12px; left: 12px; width: 300px; max-height: calc(100% - 24px); overflow-y: auto;
+           color: #e3eef6; font-size: 13px; display: flex; flex-direction: column; gap: 8px; }
+    .card { background: rgba(10, 18, 26, 0.86); border: 1px solid #2c5a78; border-radius: 10px; padding: 8px 12px; }
+    .card h2 { font-size: 14px; margin: 2px 0 6px; }
+    .card h2 small { font-weight: normal; color: #9db4c4; }
+    .row { display: flex; justify-content: space-between; padding: 2px 0; }
+    .muted { color: #9db4c4; margin: 4px 0; }
+    .good { color: #8fe3a6; } .warn { color: #ffd166; } .bad { color: #ff8a7a; }
+    .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 6px 0; }
+    button { font: inherit; color: #fff; background: #24597a; border: 1px solid #3aa3d9; border-radius: 6px; padding: 5px 6px; cursor: pointer; }
+    button:hover { background: #2f74a0; }
+    button:focus-visible { outline: 2px solid #ffd166; outline-offset: 2px; }
+    button.ok { background: #2f6f4a; width: 100%; }
+    button.warn { background: #8a3b2b; color: #fff; margin-top: 4px; }
+    .alarm { border-left: 3px solid #ffd166; padding: 4px 8px; margin: 6px 0; }
+    .alarm.critical { border-color: #ff6b5b; }
+    .alarm ol { margin: 4px 0; padding-left: 18px; color: #cfe0ec; }
+    #h-toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: rgba(10,18,26,0.92);
+               padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+    #h-toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div id="hud"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 前端依赖和构建产物（组员自己 npm install / npm run build）
+web/node_modules/
+web/dist/
+
+# 本机密钥和服务数据
+.env
+infra/influxdb/
+infra/mosquitto/*.log
+
+# 日志
+logs/
+*.log

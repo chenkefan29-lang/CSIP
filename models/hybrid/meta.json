@@ -1,0 +1,22 @@
+{
+ "targets": [
+  "SNH5",
+  "SNO2",
+  "eff_SNH",
+  "eff_SNO",
+  "eff_TSS",
+  "eff_COD",
+  "MLSS5"
+ ],
+ "inputs": [
+  "Qin",
+  "inf_SNH",
+  "inf_COD",
+  "Tin",
+  "kla5",
+  "Qa",
+  "hsin",
+  "hcos"
+ ],
+ "window": 24
+}
